@@ -26,12 +26,7 @@ function App() {
   return (
     <div className="App">
       <header className="header">
-        <img
-          className="icon"
-          src={process.env.PUBLIC_URL + "/images/logo.svg"}
-          alt="logo"
-          width={100}
-        />
+        <img className="icon" src="/images/logo.svg" alt="logo" width={100} />
         {windowWidth < 760 && (
           <img
             className="icon-menu"

@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 export default function Company() {
-  const arrowDownSrc = "/images/icon-arrow-down.svg";
-  const arrowUpSrc = "/images/icon-arrow-up.svg";
+  const arrowDownSrc = "./images/icon-arrow-down.svg";
+  const arrowUpSrc = "./images/icon-arrow-up.svg";
   const [openList, setOpenList] = useState(false);
   return (
     <div className="company">
