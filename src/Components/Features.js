@@ -1,7 +1,7 @@
 import { useState } from "react";
 export default function Features() {
-  const arrowDownSrc = "/images/icon-arrow-down.svg";
-  const arrowUpSrc = "/images/icon-arrow-up.svg";
+  const arrowDownSrc = "../images/icon-arrow-down.svg";
+  const arrowUpSrc = "../images/icon-arrow-up.svg";
   const [openList, setOpenList] = useState(false);
   return (
     <div className="features">
@@ -22,19 +22,19 @@ export default function Features() {
       {openList && (
         <div className="navlist_div">
           <p className="navlist">
-            <img src="/images/icon-todo.svg" />
+            <img src="../images/icon-todo.svg" />
             Todo List
           </p>
           <p className="navlist">
-            <img src="/images/icon-calendar.svg" />
+            <img src="../images/icon-calendar.svg" />
             Calender
           </p>
           <p className="navlist">
-            <img src="/images/icon-reminders.svg" />
+            <img src="../images/icon-reminders.svg" />
             Reminders
           </p>
           <p className="navlist">
-            <img src="/images/icon-planning.svg" />
+            <img src="../images/icon-planning.svg" />
             Planning
           </p>
         </div>

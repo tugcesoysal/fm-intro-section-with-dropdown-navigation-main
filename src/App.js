@@ -33,8 +33,8 @@ function App() {
             alt="icon menu"
             src={
               navIsOpen
-                ? "/images/icon-close-menu.svg"
-                : "/images/icon-menu.svg"
+                ? "../images/icon-close-menu.svg"
+                : "../images/icon-menu.svg"
             }
             onClick={toggleNav}
             width={navIsOpen ? 40 : 50}

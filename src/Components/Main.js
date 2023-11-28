@@ -8,14 +8,14 @@ export default function Main() {
       {isMobile ? (
         <img
           className="hero_mobile_img"
-          src="/images/image-hero-mobile.png"
+          src="../images/image-hero-mobile.png"
           alt="hero img"
           style={{ maxWidth: "100%", height: "auto" }}
         />
       ) : (
         <img
           className="hero_desktop_img"
-          src="/images/image-hero-desktop.png"
+          src="../images/image-hero-desktop.png"
           alt="hero img"
           style={{ maxWidth: "100%", height: "auto" }}
         />
@@ -28,10 +28,10 @@ export default function Main() {
         </p>
         <button className="learnBtn">Learn more</button>
         <div className="clients">
-          <img src="/images/client-databiz.svg" alt="client-databiz" />
-          <img src="/images/client-audiophile.svg" alt="client-audiophile" />
-          <img src="/images/client-meet.svg" alt="client-meet" />
-          <img src="/images/client-maker.svg" alt="client-maker" />
+          <img src="../images/client-databiz.svg" alt="client-databiz" />
+          <img src="../images/client-audiophile.svg" alt="client-audiophile" />
+          <img src="../images/client-meet.svg" alt="client-meet" />
+          <img src="../images/client-maker.svg" alt="client-maker" />
         </div>
       </div>
     </div>
