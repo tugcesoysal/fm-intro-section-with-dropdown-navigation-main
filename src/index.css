@@ -1,13 +1,255 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --white: hsl(0, 0%, 98%);
+  --gray: hsl(0, 0%, 41%);
+  --black: hsl(0, 0%, 8%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: "Epilogue", sans-serif;
+  color: var(--gray);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 20px;
+}
+
+.icon-menu {
+  align-self: start;
+}
+
+.nav {
+  background-color: white;
+  z-index: 5;
+  width: 65%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: top;
+  padding: 100px 40px;
+  font-size: 1rem;
+}
+
+.nav > p {
+  margin-bottom: 20px;
+}
+
+.icon-menu {
+  position: fixed;
+  align-self: end;
+  top: 25px;
+  right: 20px;
+  margin-bottom: 10px;
+  z-index: 6;
+}
+
+.icon-arrow {
+  margin-left: 10px;
+}
+
+.features_header,
+.company_header {
+  position: initial;
+  text-align: left;
+}
+
+.navlist {
+  text-align: left;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.features img {
+  margin-right: 30px;
+}
+
+.login-btn {
+  margin-top: 20px;
+}
+
+.login-btn,
+.register-btn {
+  width: 100%;
+  height: 50px;
+  border-radius: 15px;
+  background-color: white;
+  color: var(--gray);
+  margin-bottom: 10px;
+  font-size: 1rem;
+  border: none;
+  font-weight: 500;
+}
+
+.login-btn:hover,
+.register-btn:hover {
+  border: 2px solid var(--gray);
+}
+
+.main_header {
+  color: var(--black);
+}
+
+.main_parag {
+  text-align: center;
+  line-height: 1.5;
+  margin-inline: 40px;
+}
+
+.learnBtn {
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--black);
+  border-radius: 15px;
+  border: none;
+  padding: 15px 30px;
+  margin: 10px auto;
+  letter-spacing: 1px;
+}
+
+.clients {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 30px;
+  margin-top: 30px;
+}
+
+button,
+.navlist,
+.icon-arrow,
+.icon-menu,
+.icon-close-menu,
+.clients > img,
+.nav > p,
+.company_header,
+.features_header {
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+@media (min-width: 760px) {
+  .icon {
+    width: 100px;
+  }
+
+  .nav {
+    width: 90%;
+    height: 100px;
+    position: fixed;
+    top: -10px;
+    padding: 0 20px;
+    flex-direction: row;
+    align-items: center;
+    left: 150px;
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  .nav > p {
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+  }
+
+  .company {
+    margin-left: 40px;
+  }
+
+  .features img {
+    margin-right: 10px;
+  }
+
+  .login-btn,
+  .register-btn {
+    width: 10%;
+    margin: 0;
+  }
+
+  .login-btn {
+    margin-left: auto;
+  }
+
+  .icon-arrow {
+    margin-left: 10px;
+  }
+
+  .features,
+  .company {
+    position: relative;
+  }
+
+  .navlist_div {
+    position: absolute;
+    top: 50px;
+    left: -30px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 160px;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .content {
+    text-align: left;
+    margin-inline: 5%;
+    padding: 60px;
+  }
+
+  .main_header {
+    font-size: 4rem;
+    margin-inline-end: 230px;
+  }
+
+  .main_parag {
+    text-align: left;
+    margin: 0;
+    padding-inline-end: 100px;
+  }
+
+  .learnBtn {
+    margin-top: 60px;
+  }
+
+  .clients {
+    margin-top: 100px;
+    padding-left: 0;
+  }
+
+  .hero_desktop_img {
+    width: 40%;
+    max-height: 80vh;
+    margin-right: 5%;
+  }
 }
