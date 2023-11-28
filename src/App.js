@@ -3,6 +3,9 @@ import Nav from "./Components/Nav";
 import Main from "./Components/Main";
 import Overlay from "./Components/Overlay";
 import { useState, useEffect } from "react";
+import logo from "./images/logo.svg";
+import closeMenu from "./images/icon-close-menu.svg";
+import iconMenu from "./images/icon-menu.svg";
 
 function App() {
   const [navIsOpen, setNavIsOpen] = useState(false);
@@ -26,16 +29,12 @@ function App() {
   return (
     <div className="App">
       <header className="header">
-        <img className="icon" src="/images/logo.svg" alt="logo" width={100} />
+        <img className="icon" src={logo} alt="logo" width={100} />
         {windowWidth < 760 && (
           <img
             className="icon-menu"
             alt="icon menu"
-            src={
-              navIsOpen
-                ? "../images/icon-close-menu.svg"
-                : "../images/icon-menu.svg"
-            }
+            src={navIsOpen ? closeMenu : iconMenu}
             onClick={toggleNav}
             width={navIsOpen ? 40 : 50}
           />

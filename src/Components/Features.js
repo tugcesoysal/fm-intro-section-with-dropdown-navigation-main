@@ -1,7 +1,12 @@
 import { useState } from "react";
+import arrowDown from "../images/icon-arrow-down.svg";
+import arrowUp from "../images/icon-arrow-up.svg";
+import toDo from "../images/icon-todo.svg";
+import calendar from "../images/icon-calendar.svg";
+import reminders from "../images/icon-reminders.svg";
+import planning from "../images/icon-planning.svg";
+
 export default function Features() {
-  const arrowDownSrc = "../images/icon-arrow-down.svg";
-  const arrowUpSrc = "../images/icon-arrow-up.svg";
   const [openList, setOpenList] = useState(false);
   return (
     <div className="features">
@@ -10,7 +15,7 @@ export default function Features() {
         <span className="icon-arrow">
           {" "}
           <img
-            src={openList ? arrowUpSrc : arrowDownSrc}
+            src={openList ? arrowUp : arrowDown}
             alt="icon arrow down"
             width={15}
             onClick={() => {
@@ -22,19 +27,19 @@ export default function Features() {
       {openList && (
         <div className="navlist_div">
           <p className="navlist">
-            <img src="../images/icon-todo.svg" />
+            <img src={toDo} />
             Todo List
           </p>
           <p className="navlist">
-            <img src="../images/icon-calendar.svg" />
+            <img src={calendar} />
             Calender
           </p>
           <p className="navlist">
-            <img src="../images/icon-reminders.svg" />
+            <img src={reminders} />
             Reminders
           </p>
           <p className="navlist">
-            <img src="../images/icon-planning.svg" />
+            <img src={planning} />
             Planning
           </p>
         </div>

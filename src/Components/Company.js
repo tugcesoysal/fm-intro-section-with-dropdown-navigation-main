@@ -1,8 +1,8 @@
 import { useState } from "react";
+import arrowDown from "../images/icon-arrow-down.svg";
+import arrowUp from "../images/icon-arrow-up.svg";
 
 export default function Company() {
-  const arrowDownSrc = "../images/icon-arrow-down.svg";
-  const arrowUpSrc = "../images/icon-arrow-up.svg";
   const [openList, setOpenList] = useState(false);
   return (
     <div className="company">
@@ -10,7 +10,7 @@ export default function Company() {
         Company{" "}
         <span className="icon-arrow">
           <img
-            src={openList ? arrowUpSrc : arrowDownSrc}
+            src={openList ? arrowUp : arrowDown}
             alt="icon arrow down"
             width={15}
             onClick={() => {
